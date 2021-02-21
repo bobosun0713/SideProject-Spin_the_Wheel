@@ -145,23 +145,14 @@ export default {
 
     transform-origin: 50% 100%;
 
-    @include RWD_676px {
-      right: 45px;
-      bottom: 35px;
-    }
     @include RWD_576px {
       font-size: 1.5rem;
-      right: 35px;
     }
     @include RWD_499px {
       font-size: 1.25rem;
-      right: 30px;
-      bottom: 25px;
     }
     @include RWD_411px {
       font-size: 1rem;
-      right: 25px;
-      bottom: 20px;
     }
   }
 }
