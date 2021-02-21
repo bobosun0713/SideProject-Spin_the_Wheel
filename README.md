@@ -12,4 +12,4 @@
 
 ## 目前版本連結
 
-[Vue3 點我](https://bobosun0713.github.io/Side-Project__Spin-the-Wheel-V2/)
+[點我](https://bobosun0713.github.io/Side-Project__Spin-the-Wheel-V2/)
