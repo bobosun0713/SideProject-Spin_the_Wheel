@@ -1,28 +1,27 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <roulette-wrap></roulette-wrap>
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
-
+import RouletteWrap from '@/components/RouletteWrap.vue'
 export default {
-  name: "App",
+  name: 'App',
   components: {
-    HelloWorld
-  }
-};
+    RouletteWrap,
+  },
+}
 </script>
 
 <style lang="scss">
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  width: 100%;
+  height: 100%;
+  background-color: #0e171d;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 </style>
