@@ -1,3 +1,14 @@
+@mixin RWD_991px {
+  @media (max-width: 991px) {
+    @content;
+  }
+}
+
+@mixin RWD_767px {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
 @mixin RWD_676px {
   @media (max-width: 676px) {
     @content;

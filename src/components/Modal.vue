@@ -1,12 +1,10 @@
 <template>
-  <transition name="modal-fade">
-    <div class="modal">
-      <div class="modal-content">
-        <div class="modal-content__text">恭喜獲得 {{ message }}</div>
-        <button class="modal-content__cancel" @click="closeModal">關 閉</button>
-      </div>
+  <div class="modal">
+    <div class="modal-content">
+      <div class="modal-content__text">恭喜獲得 {{ message }}</div>
+      <button class="modal-content__cancel" @click="closeModal">關 閉</button>
     </div>
-  </transition>
+  </div>
 </template>
 
 <script>
@@ -127,14 +125,5 @@ export default {
       }
     }
   }
-}
-
-.modal-fade-enter-active,
-.modal-fade-leave-active {
-  transition: opacity 0.3s ease;
-}
-.modal-fade-enter,
-.modal-fade-leave-to {
-  opacity: 0;
 }
 </style>

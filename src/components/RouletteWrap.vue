@@ -19,28 +19,33 @@
     ></roulette-content>
 
     <!-- 中獎訊息(modal) -->
-    <modal
-      v-if="isOpenModal"
-      :message="message"
-      @close-Modal="closeModal"
-    ></modal>
+    <transition name="modal-fade">
+      <modal
+        v-if="isOpenModal"
+        :message="message"
+        @close-Modal="closeModal"
+      ></modal>
+    </transition>
+
 
     <!-- 設定 -->
     <button class="roulette-button" :disabled="isStart" @click="openSetting">
       設定
     </button>
-    <roulette-setting
-      :db="dbData"
-      :style="{ left: settingLeft }"
-      @reset-degree="resetDegree"
-    ></roulette-setting>
+
+    <transition name="fade">
+      <roulette-setting
+        v-if="isOpenSetting"
+        :db="dbData"
+        @reset-degree="resetDegree"
+      ></roulette-setting>
+    </transition>
   </div>
 </template>
 
 <script>
 import RouletteContent from '@/components/RouletteContent.vue'
 import RouletteSetting from '@/components/RouletteSetting.vue'
-
 import Modal from '@/components/Modal.vue'
 
 import db from '@/db/data.json'
@@ -60,11 +65,6 @@ export default {
       isOpenSetting: false,
       message: '',
     }
-  },
-  computed: {
-    settingLeft() {
-      return !this.isOpenSetting || this.isStart ? '-300px' : 0
-    },
   },
   watch: {
     // 新增獎品時，重新設定角度
@@ -119,7 +119,11 @@ export default {
 
     // 開啟設定視窗
     openSetting() {
+      console.log('s')
       this.isOpenSetting = !this.isOpenSetting
+    },
+    closeSetting(){
+      //  this.isOpenSetting = false
     },
 
     // 重製角度
@@ -219,4 +223,6 @@ export default {
   font-weight: bold;
   font-size: 1.125rem;
 }
+
+
 </style>

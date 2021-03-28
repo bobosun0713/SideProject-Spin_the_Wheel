@@ -7,10 +7,9 @@
       :style="{ transform: panelOutside(idx) }"
       class="panel-item"
     >
-      <div class="panel-item__inside" :style="{ transform: panelInside }">
-        <!-- <span class="panel-item__inside__text">{{ item.price }}</span> -->
+      <div class="panel-item__inside" :style="{ transform: panelInside , backgroundColor:item.background }">
       </div>
-      <div class="panel-item__text test" :style="{ transform: panelPrice }">
+      <div class="panel-item__text" :style="{ transform: panelPrice , color:item.fontColor }">
         {{ item.price }}
       </div>
     </div>
@@ -122,12 +121,6 @@ export default {
     }
   }
 
-  &:nth-of-type(even) &__inside {
-    background-color: #75485e;
-  }
-  &:nth-of-type(odd) &__inside {
-    background-color: #51a3a3;
-  }
 
   // 獎品
   &__text {
