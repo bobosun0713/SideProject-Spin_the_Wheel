@@ -27,7 +27,6 @@
       ></modal>
     </transition>
 
-
     <!-- 設定 -->
     <button class="roulette-button" :disabled="isStart" @click="openSetting">
       設定
@@ -122,7 +121,7 @@ export default {
       console.log('s')
       this.isOpenSetting = !this.isOpenSetting
     },
-    closeSetting(){
+    closeSetting() {
       //  this.isOpenSetting = false
     },
 
@@ -189,10 +188,9 @@ export default {
 
   &__btn {
     position: absolute;
-    bottom: 25px;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
+    left: 50%;
+    top: 70%;
+    transform: translate(-50%, -50%);
 
     user-select: none;
     font-size: 1.8rem;
@@ -203,12 +201,10 @@ export default {
       0 0 30px rgba(246, 229, 141, 1);
 
     @include RWD_676px {
-      bottom: 25px;
       font-size: 1.5rem;
     }
     @include RWD_499px {
       font-size: 1rem;
-      bottom: 10px;
     }
   }
 }
@@ -223,6 +219,4 @@ export default {
   font-weight: bold;
   font-size: 1.125rem;
 }
-
-
 </style>
