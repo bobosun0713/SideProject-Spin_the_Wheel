@@ -1,7 +1,7 @@
 module.exports = {
   publicPath:
     process.env.NODE_ENV === 'production'
-      ? '/Side-Project__Spin-the-Wheel-V2/'
+      ? '/SideProject-Spin_the_Wheel/'
       : '/',
   css: {
     loaderOptions: {
